@@ -1,9 +1,9 @@
 package com.nbottarini.yahtzee
 
-import com.nbottarini.yahtzee.scoreCalculators.ScoreCalculatorFactory
+import com.nbottarini.yahtzee.scores.ScorerFactory
 
 class Yahtzee {
-    private val factory = ScoreCalculatorFactory()
+    private val factory = ScorerFactory()
 
-    fun calculateScore(roll: Roll, category: Categories) = factory.scoreCalculatorFor(category).scoreFor(roll)
+    fun calculateScore(roll: Roll, category: Categories) = factory.scorerFor(category).scoreFor(roll)
 }

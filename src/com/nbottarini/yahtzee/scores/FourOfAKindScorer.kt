@@ -1,7 +1,7 @@
-package com.nbottarini.yahtzee.scoreCalculators
+package com.nbottarini.yahtzee.scores
 
 import com.nbottarini.yahtzee.Roll
 
-class FourOfAKindScoreCalculator: ScoreCalculator {
+class FourOfAKindScorer: Scorer {
     override fun scoreFor(roll: Roll) = roll.diceRepeatedAtLeast(4)?.times(4) ?: 0
 }

@@ -1,8 +1,8 @@
-package com.nbottarini.yahtzee.scoreCalculators
+package com.nbottarini.yahtzee.scores
 
 import com.nbottarini.yahtzee.Roll
 
-class PairScoreCalculator: ScoreCalculator {
+class PairScorer: Scorer {
     override fun scoreFor(roll: Roll) = highestPairDice(roll)?.times(2) ?: 0
 
     private fun highestPairDice(roll: Roll) = pairs(roll).maxOrNull()

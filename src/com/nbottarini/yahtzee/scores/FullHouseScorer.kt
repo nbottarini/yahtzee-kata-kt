@@ -1,8 +1,8 @@
-package com.nbottarini.yahtzee.scoreCalculators
+package com.nbottarini.yahtzee.scores
 
 import com.nbottarini.yahtzee.Roll
 
-class FullHouseScoreCalculator : ScoreCalculator {
+class FullHouseScorer : Scorer {
     override fun scoreFor(roll: Roll) = if (isFullHouse(roll)) roll.sum() else 0
 
     private fun isFullHouse(roll: Roll) = pairs(roll).size == 2 && threesOfAKind(roll).size == 3
